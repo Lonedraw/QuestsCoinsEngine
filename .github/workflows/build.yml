@@ -20,7 +20,6 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B package
-        working-directory: QuestsCoinsEngine 
 
       - name: Upload JAR to Release
         uses: softprops/action-gh-release@v2
