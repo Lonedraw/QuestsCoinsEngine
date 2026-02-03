@@ -1,8 +1,8 @@
 package me.taro.questscoinsengine;
 
-import me.nightexpress.coinsengine.api.CoinsEngineAPI;
-import me.nightexpress.coinsengine.api.currency.Currency;
-import me.nightexpress.coinsengine.api.user.User;
+import su.nightexpress.coinsengine.api.CoinsEngineAPI;
+import su.nightexpress.coinsengine.api.currency.Currency;
+import su.nightexpress.coinsengine.api.user.User;
 import org.bukkit.plugin.Plugin;
 
 import java.util.UUID;
