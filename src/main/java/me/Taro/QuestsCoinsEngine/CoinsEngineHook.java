@@ -2,7 +2,7 @@ package me.taro.questscoinsengine;
 
 import su.nightexpress.coinsengine.api.CoinsEngineAPI;
 import su.nightexpress.coinsengine.api.currency.Currency;
-import su.nightexpress.coinsengine.api.user.User;
+import su.nightexpress.coinsengine.user.UserManager;
 import org.bukkit.plugin.Plugin;
 
 import java.util.UUID;
