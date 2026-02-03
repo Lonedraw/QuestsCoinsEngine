@@ -55,7 +55,6 @@
     <version>5.2.7</version>
     <scope>provided</scope>
 </dependency>
-        </dependency>
 
         <!-- CoinsEngine -->
              <dependency>
