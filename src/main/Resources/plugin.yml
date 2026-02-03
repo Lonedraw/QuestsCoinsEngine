@@ -1,0 +1,6 @@
+name: QuestsCoinsEngine
+main: me.yourname.questscoinsengine.QuestsCoinsEngine
+version: 1.0.0
+api-version: '1.21'
+depend: [Quests]
+softdepend: [CoinsEngine]
