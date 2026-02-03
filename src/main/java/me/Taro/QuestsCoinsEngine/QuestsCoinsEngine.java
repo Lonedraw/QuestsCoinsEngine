@@ -1,34 +1,41 @@
 package me.taro.questscoinsengine;
 
-import me.blackvein.quests.Quests;
-import me.blackvein.quests.api.QuestsAPI;
-import me.blackvein.quests.api.reward.RewardType;
-import me.yourname.questscoinsengine.reward.CoinsReward;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.entity.Player;
+import me.taro.questscoinsengine.Reward.CoinsReward;
 
-public class QuestsCoinsEngine extends JavaPlugin {
+public final class QuestsCoinsEngine extends JavaPlugin {
+
+    private CoinsEngineHook coinsHook;
 
     @Override
     public void onEnable() {
-        if (!getServer().getPluginManager().isPluginEnabled("CoinsEngine")) {
-            getLogger().warning("CoinsEngine not found — Coins reward disabled.");
+        // Initialize NightCore hook
+        if (!getServer().getPluginManager().isPluginEnabled("NightCore")) {
+            getLogger().warning("NightCore not found — Coins rewards disabled.");
             return;
         }
 
-        Quests quests = (Quests) getServer()
-                .getPluginManager()
-                .getPlugin("Quests");
+        this.coinsHook = new CoinsEngineHook(this);
 
-        if (quests == null) {
-            getLogger().severe("Quests not found — disabling.");
-            getServer().getPluginManager().disablePlugin(this);
-            return;
+        getLogger().info("QuestsCoinsEngine enabled with NightCore Coins integration!");
+    }
+
+    @Override
+    public void onDisable() {
+        getLogger().info("QuestsCoinsEngine disabled.");
+    }
+
+    // Example method to give a player coins
+    public void givePlayerCoins(Player player, double amount) {
+        if (coinsHook != null) {
+            coinsHook.giveCoins(player, amount);
+            getLogger().info("Gave " + amount + " coins to " + player.getName());
         }
+    }
 
-        QuestsAPI api = quests.getQuestsAPI();
-        RewardType reward = new CoinsReward(new CoinsEngineHook(this));
-        api.getRewardTypeRegistry().register(reward);
-
-        getLogger().info("CoinsEngine reward registered successfully.");
+    // Factory for coin rewards (optional)
+    public CoinsReward createCoinsReward(double amount) {
+        return new CoinsReward(amount, coinsHook);
     }
 }
