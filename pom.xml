@@ -66,5 +66,10 @@
   <artifactId>CoinsEngine</artifactId>
   <version>2.6.0</version>
 </dependency>
+             <dependency>
+  <groupId>su.nightexpress.nightcore</groupId>
+  <artifactId>main</artifactId>
+  <version>2.13.3</version>
+</dependency>
     </dependencies>
 </project>
