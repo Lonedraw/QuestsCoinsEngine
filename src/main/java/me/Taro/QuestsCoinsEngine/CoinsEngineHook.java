@@ -25,7 +25,7 @@ public class CoinsEngineHook {
             return;
         }
 
-        User user = CoinsEngineAPI.getUserManager().getOrCreateUser(uuid);
+        User user = CoinsEngineAPI.getUserManager().getCoinsUser(uuid);
         user.addCoins(currency, amount);
     }
 }
