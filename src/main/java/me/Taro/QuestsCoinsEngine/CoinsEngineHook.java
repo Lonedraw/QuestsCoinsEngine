@@ -16,7 +16,7 @@ public class CoinsEngineHook {
     }
 
     public void giveCoins(UUID uuid, String currencyId, double amount) {
-        Currency currency = CoinsEngineAPI.getCurrencyManager().getCurrencies();
+        Currency currency = CoinsEngineAPI.getCurrencyManager().getCurrencies("default");
 
         if (currency == null) {
             plugin.getLogger().warning(
