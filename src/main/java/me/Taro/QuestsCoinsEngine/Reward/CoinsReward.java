@@ -7,8 +7,8 @@ import su.nightexpress.coinsengine.api.CoinsEngineAPI;
 public class CoinsReward {
 
     private final int amount;
-    private final CoinsEngineHook hook;
-    public CoinsReward(int amount, CoinsEngineHook hook) {
+    private final GiveReward hook;
+    public CoinsReward(int amount, giveReward hook) {
         this.amount = amount;
         this.hook = hook;
     }
