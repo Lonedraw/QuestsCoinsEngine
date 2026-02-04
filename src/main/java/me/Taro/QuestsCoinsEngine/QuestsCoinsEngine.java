@@ -2,7 +2,7 @@ package me.Taro.QuestsCoinsEngine;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.entity.Player;
-import me.taro.questscoinsengine.Reward.CoinsReward;
+import me.Taro.QuestsCoinsEngine.Reward.CoinsReward;
 
 public final class QuestsCoinsEngine extends JavaPlugin {
 
