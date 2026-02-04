@@ -1,4 +1,4 @@
-package me.taro.questscoinsengine;
+package me.Taro.QuestsCoinsEngine;
 
 import su.nightexpress.coinsengine.api.CoinsEngineAPI;
 import su.nightexpress.coinsengine.api.currency.Currency;
