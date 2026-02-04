@@ -33,9 +33,3 @@ public final class QuestsCoinsEngine extends JavaPlugin {
             getLogger().info("Gave " + amount + " coins to " + player.getName());
         }
     }
-
-    // Factory for coin rewards (optional)
-    public CoinsReward createCoinsReward(double amount) {
-        return new CoinsReward(amount, coinsHook);
-    }
-}
