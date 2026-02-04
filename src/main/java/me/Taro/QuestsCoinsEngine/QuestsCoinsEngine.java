@@ -25,12 +25,4 @@ public final class QuestsCoinsEngine extends JavaPlugin {
     public void onDisable() {
         getLogger().info("QuestsCoinsEngine disabled.");
     }
-
-    // Example method to give a player coins
-    public void givePlayerCoins(Player player, double amount) {
-        if (coinsHook != null) {
-            coinsHook.giveCoins(player, amount);
-            getLogger().info("Gave " + amount + " coins to " + player.getName());
-        }
-    }
 }
