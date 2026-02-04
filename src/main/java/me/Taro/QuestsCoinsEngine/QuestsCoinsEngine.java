@@ -1,4 +1,4 @@
-package me.taro.questscoinsengine;
+package me.Taro.QuestsCoinsEngine;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.entity.Player;
