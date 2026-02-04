@@ -1,7 +1,7 @@
 package me.Taro.QuestsCoinsEngine;
 
 import su.nightexpress.coinsengine.api.CoinsEngineAPI;
-import su.nightexpress.coinsengine.api.currency.Currency;
+import su.nightexpress.coinsengine.api.currency.CurrencyManager;
 import su.nightexpress.coinsengine.user.UserManager;
 import org.bukkit.plugin.Plugin;
 
