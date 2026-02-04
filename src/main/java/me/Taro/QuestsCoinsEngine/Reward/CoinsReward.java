@@ -7,15 +7,14 @@ import su.nightexpress.coinsengine.api.CoinsEngineAPI;
 public class CoinsReward {
 
     private final int amount;
-
-    public CoinsReward(int amount) {
+    private final CoinsEngineHook hook;
+    public CoinsReward(int amount, CoinsEngineHook hook) {
         this.amount = amount;
+        this.hook = hook;
     }
 
     public void giveReward(Player player) {
-        // NightExpress CoinsEngine API call
-        CoinsReward manager = CoinsEngineAPI.getBalance().getUserManager();
-        manager.addCoins(player.getUniqueId(), amount);
+        hook.giveCoins(player.getUniqueId(), "default_currency", amount);
     }
 
     @Override
