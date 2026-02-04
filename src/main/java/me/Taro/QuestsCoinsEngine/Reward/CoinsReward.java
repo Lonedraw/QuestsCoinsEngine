@@ -1,7 +1,7 @@
 package me.Taro.QuestsCoinsEngine.Reward;
 
 import org.bukkit.entity.Player;
-import su.nightexpress.coinsengine.CoinsEngine; // NightExpress API
+import su.nightexpress.coinsengine.CoinsEnginePlugin; // NightExpress API
 import su.nightexpress.coinsengine.api.CurrencyManager;
 
 public class CoinsReward {
