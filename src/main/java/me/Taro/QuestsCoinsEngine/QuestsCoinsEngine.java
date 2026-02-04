@@ -33,3 +33,4 @@ public final class QuestsCoinsEngine extends JavaPlugin {
             getLogger().info("Gave " + amount + " coins to " + player.getName());
         }
     }
+}
