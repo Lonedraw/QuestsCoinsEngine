@@ -14,7 +14,7 @@ public class CoinsReward {
 
     public void giveReward(Player player) {
         // NightExpress CoinsEngine API call
-        CoinsReward manager = CoinsEngine.getInstance().getManager();
+        CoinsReward manager = CoinsEngineAPI.getInstance().getManager();
         manager.addCoins(player.getUniqueId(), amount);
     }
 
